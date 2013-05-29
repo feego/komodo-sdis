@@ -39,7 +39,7 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 	private SurfaceHolder holder;
 	private MediaControllerView mMediaController;
 
-	private String path = "/storage/sdcard0/a.mp4";
+	private String path = "http://192.168.1.89:8080/how.mp4";
 
 	private boolean mIsVideoSizeKnown = false;
 	private boolean mIsVideoReadyToBePlayed = false;
@@ -87,7 +87,7 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 			}
 
 			mMediaPlayer.setDisplay(holder);
-			mMediaPlayer.prepare();
+			mMediaPlayer.prepareAsync();
 
 			Display display = getWindowManager().getDefaultDisplay();
 			Point size = new Point();
@@ -96,8 +96,6 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 			screenHeight = size.y;
 
 			screenAspectRatio = (double) screenWidth / (double) screenHeight;
-			videoAspectRatio = (double) mMediaPlayer.getVideoWidth()
-					/ (double) mMediaPlayer.getVideoHeight();
 
 			mMediaPlayer.setOnBufferingUpdateListener(this);
 			mMediaPlayer.setOnCompletionListener(this);
@@ -143,7 +141,7 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 
 		@Override
 		public void onScaleEnd(ScaleGestureDetector detector) {
-			
+
 		}
 
 	}
@@ -166,6 +164,8 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 			return;
 		}
 
+		videoAspectRatio = (double) width / (double) height;
+		
 		mIsVideoSizeKnown = true;
 		if (mIsVideoReadyToBePlayed && mIsVideoSizeKnown) {
 			startVideoPlayback();
@@ -232,7 +232,6 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 
 		if (screenAspectRatio > videoAspectRatio) {
 			if (!isVideoZoomed) {
-				System.out.println("CENAS");
 				lp.height = screenHeight;
 				lp.width = (int) (screenHeight * videoAspectRatio);
 			} else {
