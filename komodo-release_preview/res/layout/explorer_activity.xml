@@ -37,9 +37,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
-        android:text="No files to show..."
+        android:text="@string/nofiles"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#EEEEEE"
         android:textStyle="italic" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
     
 </RelativeLayout>

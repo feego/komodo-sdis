@@ -15,17 +15,20 @@ import com.komodo.files.File;
 
 import android.os.AsyncTask;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class TCPClient extends AsyncTask<String, Void, String> {
 	private String hostName;
 	ListAdapter adapter;
 	TextView nofilesMessage;
+	ProgressBar loading;
 
-	public TCPClient(ListAdapter mAdapter, TextView nofiles) {
+	public TCPClient(ListAdapter mAdapter, TextView nofiles, ProgressBar loading) {
 		adapter = mAdapter;
 		hostName = com.komodo.Session.serverAddress;
 		nofilesMessage = nofiles;
+		this.loading = loading;
 	}
 
 	@Override
@@ -78,6 +81,7 @@ public class TCPClient extends AsyncTask<String, Void, String> {
 			nofilesMessage.setVisibility(View.VISIBLE);
 		}
 
+		loading.setVisibility(View.GONE);
 		adapter.notifyDataSetChanged();
 	}
 }

@@ -6,6 +6,7 @@
     <string name="endere_o_ip_do_computador">Your computer IP address</string>
     <string name="ip_sample">127.1.1.2</string>
     <string name="camera">camera</string>
+    <string name="nofiles">No files to show...</string>
     <string name="qr_code">Scan QR Code</string>
     <string name="zx_msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
     <string name="zx_error">Internal Library Error</string>

@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+
 import com.komodo.api.imdb.ImdbAPI;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -36,11 +38,14 @@ public class MediaExplorerActivity extends Activity {
 		TextView nofiles = (TextView) findViewById(R.id.textView1);
 		nofiles.setVisibility(View.GONE);
 		
+		ProgressBar loading = (ProgressBar) findViewById(R.id.progressBar1);
+		loading.setVisibility(View.VISIBLE);
+		
 		ListView mList = (ListView) findViewById(R.id.list);
 		mAdapter = new ListAdapter(this, mediaFiles);
 		mList.setAdapter(mAdapter);
 
-		new TCPClient(mAdapter, nofiles).execute();
+		new TCPClient(mAdapter, nofiles, loading).execute();
 		mList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
 			@Override

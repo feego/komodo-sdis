@@ -118,14 +118,15 @@ public final class R {
         public static final int Kom_logo=0x7f0a0001;
         public static final int app_name=0x7f0a0000;
         public static final int camera=0x7f0a0004;
-        public static final int description=0x7f0a0009;
+        public static final int description=0x7f0a000a;
         public static final int endere_o_ip_do_computador=0x7f0a0002;
         public static final int ip_sample=0x7f0a0003;
-        public static final int qr_code=0x7f0a0005;
-        public static final int zx_close=0x7f0a0008;
-        public static final int zx_error=0x7f0a0007;
-        public static final int zx_msg_default_status=0x7f0a0006;
-        public static final int zx_unexpected_camera_error=0x7f0a000a;
+        public static final int nofiles=0x7f0a0005;
+        public static final int qr_code=0x7f0a0006;
+        public static final int zx_close=0x7f0a0009;
+        public static final int zx_error=0x7f0a0008;
+        public static final int zx_msg_default_status=0x7f0a0007;
+        public static final int zx_unexpected_camera_error=0x7f0a000b;
     }
     public static final class style {
         /** 
