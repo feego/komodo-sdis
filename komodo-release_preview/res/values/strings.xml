@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Komodo</string>
+    <string name="Kom_logo">Komodo_logo</string>
+    <string name="endere_o_ip_do_computador">Your computer IP address</string>
+    <string name="ip_sample">127.1.1.2</string>
+    <string name="camera">camera</string>
+    <string name="qr_code">Scan QR Code</string>
+    <string name="zx_msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+    <string name="zx_error">Internal Library Error</string>
+    <string name="zx_close">Close</string>
+    <string name="description">Controls</string>
+    <string name="zx_unexpected_camera_error">Unexpected camera or subsystem error: %s</string>
+
+</resources>

@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    tools:context=".Komodo" >
+
+    <ImageView
+        android:id="@+id/kom_imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#EE000000"
+        android:contentDescription="@string/Kom_logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/kom" />
+
+</RelativeLayout>
