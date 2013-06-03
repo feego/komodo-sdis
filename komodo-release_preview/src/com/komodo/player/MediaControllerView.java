@@ -416,6 +416,7 @@ public class MediaControllerView extends FrameLayout {
 
 	@Override
 	public void setEnabled(boolean enabled) {
+		mPlayer = null;
 		if (mPauseButton != null) {
 			mPauseButton.setEnabled(enabled);
 		}

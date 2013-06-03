@@ -24,22 +24,22 @@ public class Komodo extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_komodo);
 
-//		WifiManager wifiMgr = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-//		if (!wifiMgr.isWifiEnabled()) {
-//			wificonnected = false;
-//
-//			new AlertDialog.Builder(this)
-//					.setTitle("Wi-Fi Connection")
-//					.setMessage("You must enable Wi-Fi to use Komodo.")
-//					.setNeutralButton("OK",
-//							new DialogInterface.OnClickListener() {
-//								public void onClick(DialogInterface dialog,
-//										int which) {
-//									//System.exit(-1);
-//								}
-//							}).show();
-//
-//		}
+		WifiManager wifiMgr = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+		if (!wifiMgr.isWifiEnabled()) {
+			wificonnected = false;
+
+			new AlertDialog.Builder(this)
+					.setTitle("Wi-Fi Connection")
+					.setMessage("You must enable Wi-Fi to use Komodo.")
+					.setNeutralButton("OK",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int which) {
+									//System.exit(-1);
+								}
+							}).show();
+
+		}
 
 		final ImageView myImageView = (ImageView) findViewById(R.id.kom_imageview);
 		final Animation fadeInAnimation = AnimationUtils.loadAnimation(this,

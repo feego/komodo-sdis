@@ -16,6 +16,7 @@ import android.media.MediaPlayer.OnVideoSizeChangedListener;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener;
@@ -318,4 +319,15 @@ public class Player extends Activity implements OnBufferingUpdateListener,
 	@Override
 	public void toggleFullScreen() {
 	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if (keyCode == KeyEvent.KEYCODE_BACK) {
+	    	mMediaController.setEnabled(false);
+	        finish();
+	        return true;
+	    }
+	    return super.onKeyDown(keyCode, event);
+	}
+	
 }
